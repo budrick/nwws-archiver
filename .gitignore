@@ -1,0 +1,5 @@
+/target
+
+.env
+nwws-oi
+bulletins.sqlite

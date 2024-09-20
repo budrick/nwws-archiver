@@ -1,0 +1,23 @@
+[package]
+name = "nwws-archiver"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+chrono = "0.4.38"
+color-eyre = "0.6.3"
+dotenv = "0.15.0"
+env_logger = "0.11.5"
+futures = "0.3.30"
+log = "0.4.22"
+nwws-oi = "0.2.1"
+sqlx = { version = "0.8.2", features = ["sqlite"] }
+tokio = "1"
+tokio-xmpp = "=3.5"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter", "fmt"] }
+uuid = { version = "1.10.0", features = ["v4"] }
+
+[patch.crates-io]
+nwws-oi = { git = "https://github.com/budrick/nwws-oi.git", branch = "fix/tokio-xmpp-350" }
+# nwws-oi = { path = "./nwws-oi" }
